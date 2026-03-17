@@ -9,46 +9,48 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Identity Security Engineer",
-    company: "Professional Experience",
-    period: "2020 - Present",
+    title: "Sr. Engineer - Implementation",
+    company: "Ilantus Services",
+    period: "Apr 2024 - Present",
     description:
-      "Specializing in identity and access management solutions, building secure authentication systems, and implementing enterprise-grade security frameworks.",
+      "Leading IAM implementations with SailPoint IIQ and Saviynt, delivering end-to-end identity solutions for enterprise clients.",
     highlights: [
-      "Designed and implemented IAM solutions for enterprise clients",
-      "Built OAuth2/OIDC providers with multi-factor authentication",
-      "Developed role-based access control systems with fine-grained permissions",
-      "Conducted security audits and implemented compliance frameworks",
-      "Reduced security incidents by implementing zero-trust architecture",
+      "End-to-end SailPoint IIQ deployment including onboarding 20+ JDBC applications",
+      "Enhancement projects: advanced reporting, lifecycle automation, and UAT-to-production transitions",
+      "Custom development of ARS File Automation and Audit Automation modules",
+      "Saviynt support: access management workflows, compliance integrations, and system tuning",
+      "Led security compliance initiatives including VAPT handling and audit readiness",
+    ],
+    type: "work",
+  },
+  {
+    title: "Software Support Engineer",
+    company: "Ilantus Services",
+    period: "Apr 2022 - Mar 2024",
+    description:
+      "Provided technical support and maintenance for enterprise IAM platforms, resolving complex identity and access issues.",
+    highlights: [
+      "Technical troubleshooting for SailPoint IIQ and Saviynt identity platforms",
+      "Application maintenance and issue resolution for IAM implementations",
+      "Customer assistance and incident management for identity security solutions",
+      "Supported access governance, certification campaigns, and provisioning workflows",
+      "Collaborated with implementation teams on platform enhancements and upgrades",
     ],
     type: "work",
   },
   {
     title: "Full Stack Developer",
-    company: "Freelance & Projects",
-    period: "2019 - Present",
+    company: "Freelance & Personal Projects",
+    period: "2022 - Present",
     description:
-      "Building modern web applications using React, Spring Boot, Node.js, and Python across diverse industries.",
+      "Building modern web and mobile applications using React, Spring Boot, Node.js, Python, and Flutter.",
     highlights: [
-      "Delivered 20+ full-stack web applications for clients",
-      "Built real-time applications using WebSocket and Socket.io",
-      "Developed RESTful APIs with comprehensive documentation",
-      "Implemented CI/CD pipelines with GitHub Actions",
-      "Cross-platform mobile development with Flutter",
+      "Built full-stack web applications with React, Next.js, and Spring Boot",
+      "Developed RESTful APIs with comprehensive documentation and testing",
+      "Real-time applications using WebSocket and Socket.io",
+      "Cross-platform mobile development with Flutter and Firebase",
+      "Currently learning Generative AI and Agentic AI",
     ],
     type: "work",
-  },
-  {
-    title: "Bachelor's in Computer Science",
-    company: "University",
-    period: "2016 - 2020",
-    description:
-      "Focused on software engineering, cybersecurity, and distributed systems.",
-    highlights: [
-      "Specialized in cybersecurity and network security",
-      "Research in identity management and authentication protocols",
-      "Graduated with distinction",
-    ],
-    type: "education",
   },
 ];
