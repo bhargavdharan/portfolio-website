@@ -17,10 +17,10 @@ export const projects: Project[] = [
       "Enterprise-grade Identity & Access Management platform with MFA, RBAC, and audit logging.",
     longDescription:
       "A comprehensive IAM solution featuring OAuth2/OIDC, multi-factor authentication, role-based access control with fine-grained permissions, user lifecycle management, session tracking, and detailed audit trails.",
-    tech: ["React", "Spring Boot", "PostgreSQL", "OAuth2", "JWT"],
+    tech: ["React", "Spring Boot", "PostgreSQL", "JWT", "TOTP MFA"],
     image: "/images/secureauth.svg",
     github: "https://github.com/bhargavdharan/secureauth-iam",
-    demo: "#",
+    demo: "https://secureauth-iam-production.up.railway.app",
     category: "Security",
     featured: true,
   },
