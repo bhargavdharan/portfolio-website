@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5276"/>
+      <stop offset="100%" style="stop-color:#1abc9c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="12" fill="url(#bg)"/>
+  <!-- Chat bubble 1 (left) -->
+  <rect x="160" y="70" width="55" height="35" rx="10" fill="rgba(255,255,255,0.85)"/>
+  <path d="M170 105 L165 115 L180 105" fill="rgba(255,255,255,0.85)"/>
+  <!-- Dots inside bubble 1 -->
+  <circle cx="176" cy="87" r="2.5" fill="rgba(26,82,118,0.6)"/>
+  <circle cx="187" cy="87" r="2.5" fill="rgba(26,82,118,0.6)"/>
+  <circle cx="198" cy="87" r="2.5" fill="rgba(26,82,118,0.6)"/>
+  <!-- Chat bubble 2 (right) -->
+  <rect x="185" y="120" width="55" height="35" rx="10" fill="rgba(255,255,255,0.55)"/>
+  <path d="M230 155 L235 165 L220 155" fill="rgba(255,255,255,0.55)"/>
+  <!-- Lines inside bubble 2 -->
+  <rect x="196" y="133" width="30" height="3" rx="1.5" fill="rgba(255,255,255,0.8)"/>
+  <rect x="196" y="140" width="20" height="3" rx="1.5" fill="rgba(255,255,255,0.6)"/>
+  <!-- Connection dots -->
+  <circle cx="175" cy="175" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="200" cy="180" r="3" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="225" cy="175" r="3" fill="rgba(255,255,255,0.3)"/>
+  <line x1="175" y1="175" x2="200" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <line x1="200" y1="180" x2="225" y2="175" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <!-- Text -->
+  <text x="200" y="225" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+        font-size="28" font-weight="bold" fill="rgba(255,255,255,0.95)" letter-spacing="1">
+    ChatNexus
+  </text>
+  <text x="200" y="250" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+        font-size="13" fill="rgba(255,255,255,0.55)" letter-spacing="2">
+    MESSAGING APPLICATION
+  </text>
+</svg>

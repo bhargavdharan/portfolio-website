@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e67e22"/>
+      <stop offset="100%" style="stop-color:#f1c40f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" rx="12" fill="url(#bg)"/>
+  <!-- Shopping bag body -->
+  <rect x="170" y="100" width="60" height="70" rx="5" fill="none"
+        stroke="rgba(255,255,255,0.9)" stroke-width="3"/>
+  <!-- Bag handles -->
+  <path d="M185 100 L185 85 Q185 72 200 72 Q215 72 215 85 L215 100"
+        fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Stack lines (layered effect) -->
+  <rect x="175" y="175" width="50" height="4" rx="2" fill="rgba(255,255,255,0.5)"/>
+  <rect x="180" y="182" width="40" height="4" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <rect x="185" y="189" width="30" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
+  <!-- Text -->
+  <text x="200" y="230" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+        font-size="28" font-weight="bold" fill="rgba(255,255,255,0.95)" letter-spacing="1">
+    ShopStack
+  </text>
+  <text x="200" y="255" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+        font-size="13" fill="rgba(255,255,255,0.7)" letter-spacing="2">
+    E-COMMERCE PLATFORM
+  </text>
+</svg>
