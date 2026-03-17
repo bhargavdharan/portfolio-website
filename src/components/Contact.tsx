@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { FiSend, FiMapPin, FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 import SectionHeading from "./SectionHeading";
 
+const EMAIL = "bhargavdharan20@gmail.com";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,30 +14,15 @@ export default function Contact() {
     subject: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setStatus("sending");
 
-    // Using Formspree - replace with your form ID
-    try {
-      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const body = `Hi Dharan,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
+    const mailtoUrl = `mailto:${EMAIL}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(body)}`;
 
-      if (res.ok) {
-        setStatus("sent");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000);
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+    window.open(mailtoUrl, "_blank");
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -167,28 +154,13 @@ export default function Contact() {
 
             <motion.button
               type="submit"
-              disabled={status === "sending"}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-medium hover:shadow-lg hover:shadow-primary/25 transition-shadow disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-lg font-medium hover:shadow-lg hover:shadow-primary/25 transition-shadow"
             >
-              {status === "sending" ? (
-                "Sending..."
-              ) : status === "sent" ? (
-                "Message Sent!"
-              ) : (
-                <>
-                  <FiSend size={16} />
-                  Send Message
-                </>
-              )}
+              <FiSend size={16} />
+              Send Message
             </motion.button>
-
-            {status === "error" && (
-              <p className="text-sm text-red-500 text-center">
-                Something went wrong. Please try again or email directly.
-              </p>
-            )}
           </motion.form>
         </div>
       </div>
