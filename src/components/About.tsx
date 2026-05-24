@@ -64,6 +64,11 @@ export default function About() {
                 protocols, and zero-trust security models.
               </p>
               <p className="leading-relaxed">
+                I am deeply passionate about the future of <span className="text-cyan font-medium">Generative AI and Agentic AI</span>. 
+                I actively explore LLMs, AI agent orchestration, and intelligent automation — integrating 
+                AI capabilities into modern applications to build smarter, more adaptive software.
+              </p>
+              <p className="leading-relaxed">
                 Whether it&apos;s a high-performance API, an interactive web dashboard, or a
                 cross-platform mobile app, I bring the same commitment to quality, security,
                 and clean code to every project.
@@ -71,7 +76,7 @@ export default function About() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {["React", "Spring Boot", "Node.js", "Python", "Flutter", "PostgreSQL", "Docker", "AWS"].map(
+              {["React", "Spring Boot", "Node.js", "Python", "Flutter", "PostgreSQL", "Docker", "AWS", "Generative AI", "Agentic AI"].map(
                 (tag) => (
                   <span
                     key={tag}

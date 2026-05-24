@@ -7,7 +7,7 @@ import {
   FiSmartphone,
   FiDatabase,
   FiCloud,
-  FiTool,
+  FiCpu,
 } from "react-icons/fi";
 import SectionHeading from "./SectionHeading";
 
@@ -48,11 +48,11 @@ const services = [
     tags: ["Docker", "AWS", "CI/CD", "Railway"],
   },
   {
-    icon: FiTool,
-    title: "Code Review & Architecture",
+    icon: FiCpu,
+    title: "AI Integration & Automation",
     description:
-      "Technical audits, code reviews, system architecture design, and migration planning to improve performance and security.",
-    tags: ["Architecture", "Audit", "Migration", "Optimization"],
+      "Integrating LLMs and AI agents into applications. Chatbots, intelligent automation, prompt engineering, and AI-enhanced workflows.",
+    tags: ["OpenAI API", "LLMs", "Agentic AI", "Prompt Engineering"],
   },
 ];
 
@@ -65,7 +65,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Services"
-          subtitle="Professional services tailored to your business needs — from security to full-stack development"
+          subtitle="Professional services tailored to your business needs — from AI integration to security and full-stack development"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

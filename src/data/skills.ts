@@ -55,4 +55,15 @@ export const skillCategories: SkillCategory[] = [
       { name: "Security Auditing", level: 85, icon: "audit" },
     ],
   },
+  {
+    title: "AI & Emerging Tech",
+    icon: "🤖",
+    skills: [
+      { name: "Generative AI", level: 72, icon: "genai" },
+      { name: "Agentic AI", level: 68, icon: "agentic" },
+      { name: "LLMs & Prompt Engineering", level: 70, icon: "llm" },
+      { name: "OpenAI API / GPT Integration", level: 75, icon: "openai" },
+      { name: "AI Agents & Orchestration", level: 65, icon: "agents" },
+    ],
+  },
 ];

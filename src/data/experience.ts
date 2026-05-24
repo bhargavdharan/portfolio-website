@@ -39,17 +39,18 @@ export const experiences: Experience[] = [
     type: "work",
   },
   {
-    title: "Full Stack Developer",
+    title: "Full Stack Developer & AI Explorer",
     company: "Freelance & Personal Projects",
     period: "2022 - Present",
     description:
-      "Building modern web and mobile applications using React, Spring Boot, Node.js, Python, and Flutter.",
+      "Building modern web and mobile applications while actively exploring Generative AI, Agentic AI, and LLM integrations.",
     highlights: [
       "Built full-stack web applications with React, Next.js, and Spring Boot",
       "Developed RESTful APIs with comprehensive documentation and testing",
       "Real-time applications using WebSocket and Socket.io",
       "Cross-platform mobile development with Flutter and Firebase",
-      "Currently learning Generative AI and Agentic AI",
+      "Exploring Generative AI: LLM integrations, prompt engineering, and AI agent workflows",
+      "Learning Agentic AI: autonomous agents, multi-agent orchestration, and AI-driven automation",
     ],
     type: "work",
   },
