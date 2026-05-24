@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiDownload, FiCalendar } from "react-icons/fi";
+import { SiMedium } from "react-icons/si";
 import ParticleBackground from "./ParticleBackground";
 
 export default function Hero() {
@@ -109,6 +110,7 @@ export default function Hero() {
             {[
               { icon: FiGithub, href: "https://github.com/bhargavdharan", label: "GitHub" },
               { icon: FiLinkedin, href: "https://www.linkedin.com/in/dharankumarbera/?skipRedirect=true", label: "LinkedIn" },
+              { icon: SiMedium, href: "https://medium.com/@bhargavdharan20", label: "Medium" },
               { icon: FiMail, href: "mailto:bhargavdharan20@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a

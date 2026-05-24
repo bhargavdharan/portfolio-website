@@ -142,6 +142,7 @@ const html = `<!DOCTYPE html>
         <span>📧 <a href="mailto:bhargavdharan20@gmail.com">bhargavdharan20@gmail.com</a></span>
         <span>🌐 <a href="https://github.com/bhargavdharan">github.com/bhargavdharan</a></span>
         <span>💼 <a href="https://linkedin.com/in/dharankumarbera">linkedin.com/in/dharankumarbera</a></span>
+        <span>✍️ <a href="https://medium.com/@bhargavdharan20">medium.com/@bhargavdharan20</a></span>
         <span>📍 India (Remote Available)</span>
       </div>
     </header>

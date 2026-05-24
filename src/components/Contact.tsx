@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { FiSend, FiMapPin, FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
+import { SiMedium } from "react-icons/si";
 import SectionHeading from "./SectionHeading";
 
 const EMAIL = "bhargavdharan20@gmail.com";
@@ -62,6 +63,7 @@ export default function Contact() {
                 { icon: FiMapPin, label: "Location", value: "India (Remote Available)", href: "#" },
                 { icon: FiGithub, label: "GitHub", value: "github.com/bhargavdharan", href: "https://github.com/bhargavdharan" },
                 { icon: FiLinkedin, label: "LinkedIn", value: "linkedin.com/in/dharankumarbera", href: "https://www.linkedin.com/in/dharankumarbera/?skipRedirect=true" },
+                { icon: SiMedium, label: "Medium", value: "medium.com/@bhargavdharan20", href: "https://medium.com/@bhargavdharan20" },
               ].map(({ icon: Icon, label, value, href }) => (
                 <a
                   key={label}

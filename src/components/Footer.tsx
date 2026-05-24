@@ -2,9 +2,12 @@
 
 import { FiGithub, FiLinkedin, FiMail, FiHeart } from "react-icons/fi";
 
+import { SiMedium } from "react-icons/si";
+
 const socialLinks = [
   { icon: FiGithub, href: "https://github.com/bhargavdharan", label: "GitHub" },
   { icon: FiLinkedin, href: "https://www.linkedin.com/in/dharankumarbera/?skipRedirect=true", label: "LinkedIn" },
+  { icon: SiMedium, href: "https://medium.com/@bhargavdharan20", label: "Medium" },
   { icon: FiMail, href: "mailto:bhargavdharan20@gmail.com", label: "Email" },
 ];
 
@@ -15,6 +18,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
+  { name: "Blogs", href: "#blogs" },
   { name: "Contact", href: "#contact" },
 ];
 
