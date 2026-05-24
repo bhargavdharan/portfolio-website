@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiDownload, FiCalendar } from "react-icons/fi";
 import ParticleBackground from "./ParticleBackground";
 
 export default function Hero() {
@@ -27,8 +27,12 @@ export default function Hero() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="inline-block mb-6 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
+            className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
           >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+            </span>
             <span className="text-primary text-sm font-medium">
               Available for Freelance Projects
             </span>
@@ -71,17 +75,29 @@ export default function Hero() {
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-shadow"
+              className="px-8 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-shadow inline-flex items-center gap-2"
             >
+              <FiCalendar size={18} />
               View My Work
             </motion.a>
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-full font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="px-8 py-3 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-full font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center gap-2"
             >
+              <FiMail size={18} />
               Get in Touch
+            </motion.a>
+            <motion.a
+              href="/resume.pdf"
+              download
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-3 border border-primary text-primary dark:text-primary rounded-full font-medium hover:bg-primary/10 transition-colors inline-flex items-center gap-2"
+            >
+              <FiDownload size={18} />
+              Download CV
             </motion.a>
           </div>
 

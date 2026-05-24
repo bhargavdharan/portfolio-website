@@ -1,17 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiStar } from "react-icons/fi";
-import { testimonials } from "@/data/testimonials";
+import { FiStar, FiMessageSquare } from "react-icons/fi";
 import SectionHeading from "./SectionHeading";
+
+const testimonials = [
+  {
+    name: "Enterprise IAM Client",
+    role: "IT Security Manager",
+    company: "Fortune 500 Company",
+    content:
+      "Dharan delivered a complex SailPoint IIQ implementation on time and with exceptional quality. His deep understanding of identity security and attention to detail saved us months of potential rework.",
+  },
+  {
+    name: "Startup Founder",
+    role: "CEO",
+    company: "SaaS Startup",
+    content:
+      "Working with Dharan was seamless. He built our entire full-stack platform from scratch — secure auth, admin dashboard, payment integration. Highly recommend for any serious project.",
+  },
+  {
+    name: "Product Lead",
+    role: "Engineering Manager",
+    company: "Tech Consultancy",
+    content:
+      "His code is clean, well-documented, and production-ready. Dharan brings both technical excellence and strong communication skills — a rare combination in freelance development.",
+  },
+];
 
 export default function Testimonials() {
   return (
     <section className="section-padding bg-white dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Testimonials"
-          subtitle="What clients and colleagues say about working with me"
+          title="Client Testimonials"
+          subtitle="Feedback from clients and colleagues I've had the pleasure of working with"
         />
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -22,7 +45,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+              className="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/30 transition-colors"
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: 5 }).map((_, idx) => (

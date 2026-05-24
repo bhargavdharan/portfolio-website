@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiShield, FiCode, FiServer, FiSmartphone } from "react-icons/fi";
+import { FiShield, FiCode, FiServer, FiSmartphone, FiDownload } from "react-icons/fi";
 import SectionHeading from "./SectionHeading";
 
 const highlights = [
@@ -81,6 +81,17 @@ export default function About() {
                   </span>
                 )
               )}
+            </div>
+
+            <div className="mt-8">
+              <a
+                href="/resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-accent text-white rounded-full font-medium hover:shadow-lg hover:shadow-primary/25 transition-shadow"
+              >
+                <FiDownload size={18} />
+                Download Resume
+              </a>
             </div>
           </motion.div>
 

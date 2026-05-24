@@ -8,6 +8,7 @@ import ThemeToggle from "./ThemeToggle";
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
@@ -17,11 +18,32 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -60% 0px", threshold: 0 }
+    );
+
+    navLinks.forEach((link) => {
+      const el = document.querySelector(link.href);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -46,17 +68,33 @@ export default function Navbar() {
           </motion.a>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium"
-              >
-                {link.name}
-              </a>
-            ))}
-            <ThemeToggle />
+          <div className="hidden md:flex items-center gap-1">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace("#", "");
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`relative px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    isActive
+                      ? "text-primary"
+                      : "text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary"
+                  }`}
+                >
+                  {link.name}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNav"
+                      className="absolute inset-0 bg-primary/10 rounded-lg -z-10"
+                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </a>
+              );
+            })}
+            <div className="ml-2">
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -80,19 +118,26 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800"
+            className="md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors font-medium"
-                >
-                  {link.name}
-                </a>
-              ))}
+            <div className="px-4 py-4 space-y-1">
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href.replace("#", "");
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block px-3 py-2 rounded-lg font-medium transition-colors ${
+                      isActive
+                        ? "text-primary bg-primary/10"
+                        : "text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary"
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                );
+              })}
             </div>
           </motion.div>
         )}
